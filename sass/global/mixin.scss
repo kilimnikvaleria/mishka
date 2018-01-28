@@ -1,0 +1,49 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1150px) {
+      @content;
+    }
+  }
+}
+
+@mixin title-text-mobile() {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  color: $title-color;
+}
+
+@mixin title-text--tablet() {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin title-text--desktop() {
+  font-size: 53px;
+  line-height: 57px;
+}
+
+@mixin container(){
+  width: 320px;
+  margin: 0 auto;
+
+@include breakpoint(tablet){
+  width: 668px;
+}
+
+@include breakpoint(desktop){
+  width: 1050px;
+}
+}

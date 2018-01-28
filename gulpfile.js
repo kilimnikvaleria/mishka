@@ -65,12 +65,12 @@ gulp.task("images", function() {
 });
 
 gulp.task("symbols", function() {
-    return gulp.src("build/images/icons/*.svg")
+    return gulp.src("build/images/*.svg")
         .pipe(svgmin())
         .pipe(svgstore({
             inlineSvg: true
         }))
-        .pipe(rename("symbols.svg"))
+        .pipe(rename("sprite.svg"))
         .pipe(gulp.dest("build/images"));
 });
 
