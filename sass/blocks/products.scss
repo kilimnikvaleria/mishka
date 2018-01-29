@@ -87,3 +87,45 @@
 .products__link:hover .products__icon{
   opacity: 0.3;
 }
+
+@include breakpoint(tablet){
+  .products{
+    position: relative;
+    margin-top: -41px;
+    background-image: url(../images/hero-tablet@1x.jpg);
+
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      height: 23px;
+      width: 100%;
+      background-image: url(../images/bg-zigzag-fill.svg);
+      background-repeat: repeat-x;
+      background-size: auto 23px;
+      background-position: -5px center;
+    }
+  }
+
+  .title{
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .products__title{
+    width: auto;
+    margin: 151px auto 376px auto;
+  }
+
+  .products__items{
+    flex-direction: row;
+  }
+
+  .products__link{
+    width: 50%;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 28px;
+    padding-bottom: 31px;
+  }
+}
