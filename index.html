@@ -13,22 +13,20 @@
     <nav class="main-nav">
         <a class="header__logo" href="index.html">
             <picture>
-                <source media="(min-width:1200px)" srcset="images/logo-desktop.svg">
+                <source media="(min-width:1150px)" srcset="images/logo-desktop.svg">
                 <source media="(min-width:768px)" srcset="images/logo-tablet.svg">
                 <img class="header__logo-image" src="images/logo-mobile.svg" alt="Mishka" width="86" height="35">
             </picture>
         </a>
         <input type="checkbox" id="main-nav__toggle" hidden>
         <label for="main-nav__toggle" class="main-nav__toggle" onclick></label>
-        <ul class="main-nav__items">
-            <li class="main-nav__item main-nav__item--active "><a href="#">Каталог товаров</a> </li>
-            <li class="main-nav__item"><a href="#">Вязание на заказ</a> </li>
-            <li class="main-nav__item main-nav__item--extra"><a href="#">Новые поступления</a> </li>
-            <li class="main-nav__item main-nav__item--extra"><a href="#">Распродажа</a> </li>
+        <ul class="main-nav__items main-nav__items--goods">
+            <li class="main-nav__item main-nav__item--first "><a class="main-nav__link" href="#">Каталог товаров</a> </li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Вязание на заказ</a> </li>
         </ul>
-        <ul class="main-nav__items user_list">
+        <ul class="main-nav__items main-nav__items--user">
             <li class="main-nav__item main-nav__item--user">
-                <a class="main-nav__link main-nav__link--search" href="#">
+                <a class="main-nav__link main-nav__link--user main-nav__link--search" href="#">
                     Поиск по сайту
                     <svg  class="main-nav__icon main-nav__icon--search" width="17.6px" height="17.6px">
                         <use xlink:href="images/sprite.svg#icon-search"></use>
@@ -36,7 +34,7 @@
                 </a>
             </li>
             <li class="main-nav__item main-nav__item--user">
-                <a class="main-nav__link main-nav__link--backet" href="#">
+                <a class="main-nav__link main-nav__link--user main-nav__link--backet" href="#">
                     <svg class="main-nav__icon main-nav__icon--backet" width="20.294px" height="18.849px">
                         <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
@@ -44,8 +42,12 @@
                 </a>
             </li>
         </ul>
+        <ul class="main-nav__items main-nav__items--extra">
+            <li class="main-nav__item main-nav__item--extra"><a class="main-nav__link" href="#">Новые поступления</a> </li>
+            <li class="main-nav__item main-nav__item--extra"><a class="main-nav__link" href="#">Распродажа</a> </li>
+        </ul>
+        <span class="header__delivery">Бесплатная доставка по России</span>
     </nav>
-    <span class="header__delivery">Бесплатная доставка по России</span>
 </header>
 </body>
 </html>
