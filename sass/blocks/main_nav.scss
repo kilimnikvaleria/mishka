@@ -215,8 +215,11 @@
     &--goods {
       order: -1;
     }
-  }
 
+    &--extra{
+      z-index: 1;
+    }
+  }
 
   .main-nav__item {
     font-size: 16px;
