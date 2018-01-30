@@ -1,0 +1,32 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title{
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+
+  @include breakpoint(tablet){
+    .title{
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  @include breakpoint(desktop){
+    .title{
+      font-size: 50px;
+      line-height: 57px;
+    }
+  }
+}
