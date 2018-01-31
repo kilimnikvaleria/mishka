@@ -28,6 +28,7 @@
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 21px;
+  color: black;
 
 
   &::before {
@@ -67,5 +68,89 @@
   &--gift::before{
       background-image: url(../images/icon-feature-gift.svg);
       background-position: left 2px top 5px;
+  }
+}
+
+@include breakpoint(tablet){
+  .advantages{
+
+    &::before{
+      height: 16px;
+      /* width: 768px; */
+      background-size: 768px 16px;
+      background-position: left 20px center;
+    }
+  }
+
+  .advantages__title{
+    width: 668px;
+    padding: 48px 0 45px 0;
+  }
+
+  .advantages__list{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 668px;
+  }
+
+  .advantages__item{
+    width: 334px;
+    font-size: 20px;
+    margin-bottom: 52px;
+
+    &--flower {
+      order: 1;
+    }
+
+    &--money {
+      order: 3;
+    }
+
+    &--heart {
+      order: 5;
+    }
+
+    &--ball{
+      order: 2;
+    }
+
+    &--rocket{
+      order: 4;
+    }
+
+    &--gift{
+      order: 6;
+    }
+
+
+  }
+}
+
+@include breakpoint(desktop){
+
+  .advantages{
+
+    &::before{
+      height: 23px;
+      background-position: 26px center;
+      background-size: 1050px 23px;
+    }
+  }
+
+  .advantages__title{
+    width: 700px;
+    padding-top: 55px;
+    padding-bottom: 48px;
+  }
+
+  .advantages__list{
+    width: 700px;
+  }
+
+  .advantages__item{
+    width: 350px;
   }
 }
