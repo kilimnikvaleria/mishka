@@ -69,18 +69,7 @@
   font-family: Verdana, sans-serif;
 }
 
-.button{
-  font-family: "Open Sans Bold", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $text-color;
-
-  display: block;
-  border: 2px solid $button-border-color;
-  padding: 15px 86px 17px 86px;
+.best-product__item-btn{
   margin-top: 22px;
   margin-bottom: 35px;
 }
@@ -131,9 +120,10 @@
     font-size: 18px;
   }
 
-  .button{
+  .best-product__item-btn{
     margin-top: 32px;
     margin-bottom: 52px;
+    width: 292px;
   }
 }
 
@@ -174,7 +164,7 @@
     margin-bottom: 104px;
   }
 
-  .button{
+  .best-product__item-btn{
     margin-bottom: 73px;
   }
 }

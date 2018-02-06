@@ -56,6 +56,14 @@
   display: block;
   padding-top: 12px;
   padding-bottom: 6px;
+
+  &:hover{
+    opacity: 0.6;
+  }
+
+  &:active{
+    opacity: 0.3;
+  }
 }
 
 .reviews__btn-left{
@@ -107,8 +115,8 @@
   .reviews__link{
     order: -1;
     margin-top: 0;
-    padding: 16px 41px 16px;
     margin-bottom: 44px;
+    width: 175px;
   }
 
   .reviews__text{

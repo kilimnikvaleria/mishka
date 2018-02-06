@@ -30,3 +30,27 @@
     }
   }
 }
+
+.button{
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color;
+
+  display: block;
+  border: 2px solid $button-border-color;
+  padding: 15px 0 17px 0;
+  width: 260px;
+
+  &:hover{
+    background-color: $button-border-color;
+    color: white;
+  }
+
+  &:active{
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
