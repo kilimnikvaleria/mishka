@@ -90,8 +90,8 @@
 
 @include breakpoint(tablet){
   .products{
-    position: relative;
-    margin-top: -41px;
+    //position: relative;
+   // margin-top: -41px;
     background-image: url(../images/hero-tablet@1x.jpg);
 
     &::after{
@@ -132,7 +132,7 @@
 
 @include breakpoint(desktop){
   .products{
-    margin-top: -90px;
+    //margin-top: -90px;
     background-image: url(../images/hero-desktop@1x.jpg);
 
     &::after{
