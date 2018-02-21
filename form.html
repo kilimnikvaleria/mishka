@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <script src="js/svg4everybody.min.js" type="text/javascript"></script>
@@ -50,7 +50,79 @@
     </nav>
 </header>
 <main class="main-content">
-
+    <h1 class="main-content__title title title-block">Вязание на заказ</h1>
+    <section class="order">
+        <h1 class="visually-hidden">Форма заказа</h1>
+        <p class="order__info">
+            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
+            заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <form class="order__form" method="post">
+            <fieldset class="form__type form">
+                <legend class="form__title form__title--type">тип</legend>
+                <input type="radio" name="type" id="type-item1" value="interior" class="form__input form__input--radio visually-hidden" checked>
+                <label for="type-item1" class="form__text form__text--type form__text--interior">Аксессуар для интерьера</label>
+                <input type="radio" name="type" id="type-item2" value="toy" class="form__input form__input--radio visually-hidden">
+                <label for="type-item2" class="form__text form__text--type form__text--toy">Детская игрушка</label>
+            </fieldset>
+            <div class="form__wrapper">
+                <fieldset class="form__color form">
+                    <legend class="form__title form__title--color">цвет</legend>
+                    <div class="form__wrapper-content">
+                        <input type="checkbox" id="color-item1" name="white" class="form__input form__input--checkbox visually-hidden" checked>
+                        <label for="color-item1" class="form__text form__text--color">Белый</label>
+                        <input type="checkbox" id="color-item2" name="grey" class="form__input form__input--checkbox visually-hidden" checked>
+                        <label for="color-item2" class="form__text form__text--color">Серый</label>
+                        <input type="checkbox" id="color-item3" name="tiffany" class="form__input form__input--checkbox visually-hidden">
+                        <label for="color-item3" class="form__text form__text--color">«Тиффани»</label>
+                        <input type="checkbox" id="color-item4" name="black" class="form__input form__input--checkbox visually-hidden">
+                        <label for="color-item4" class="form__text form__text--color">Черный</label>
+                        <input type="checkbox" id="color-item5" name="pink" class="form__input form__input--checkbox visually-hidden">
+                        <label for="color-item5" class="form__text form__text--color">Розовый</label>
+                        <input type="checkbox" id="color-item6" name="orange" class="form__input form__input--checkbox visually-hidden">
+                        <label for="color-item6" class="form__text form__text--color">Оранжевый</label>
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset class="form__user form">
+                <legend class="form__title form__title--user">фио</legend>
+                <ul class="form__user-info">
+                    <li class="user-info">
+                        <label for="user-surname" class="form__text">Фамилия:</label>
+                        <input type="text" name="name" id="user-surname" class="form__input form__input--text" placeholder="Укажите фамилию*" required>
+                    </li>
+                    <li class="user-info">
+                        <label for="user-name" class="form__text">Имя:</label>
+                        <input type="text" name="name" id="user-name" class="form__input form__input--text" placeholder="Введите ваше имя*" required>
+                    </li>
+                    <li class="user-info">
+                        <label for="user-last-name" class="form__text">Отчество:</label>
+                        <input type="text" name="name" id="user-last-name" class="form__input form__input--text" placeholder="Отчество, если желаете">
+                    </li>
+                </ul>
+            </fieldset>
+            <div class="form__wrapper">
+                <fieldset class="form__tel form">
+                    <label for="form-tel" class="form__title form__title--position">тел</label>
+                    <input type="tel" name="tel" id="form-tel" class="form__input form__input--text form__input--contact" placeholder="+7 ХХХ ХХ ХХ*" required>
+                    <svg class="form__icon form__icon--phone" width="25" height="25"><use xlink:href="images/sprite.svg#icon-phone"></use></svg>
+                </fieldset>
+                <fieldset class="form__email form">
+                    <label for="form-email" class="form__title form__title--position">e-mail</label>
+                    <input type="email" name="email" id="form-email" class="form__input form__input--text form__input--contact" placeholder="Ваш Email*" required>
+                    <svg class="form__icon form__icon--mail" width="32" height="32"><use xlink:href="images/sprite.svg#icon-mail"></use></svg>
+                </fieldset>
+            </div>
+            <fieldset class="form__extra form">
+                <label for="additionally-item" class="form__title form__title--position form__title--extra">доп</label>
+                <textarea name="additionally" id="additionally-item" class=" form__input form__input--additionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </fieldset>
+            <div class="form__wrapper-button">
+                <input type="submit" class="form__button button" value="Отправить заказ">
+                <span class="form__required-field">*Поля обязательны для заполнения</span>
+            </div>
+        </form>
+    </section>
 </main>
 <footer class="footer">
     <div class="footer__wrapper">

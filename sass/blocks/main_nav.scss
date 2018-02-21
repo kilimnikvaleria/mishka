@@ -106,6 +106,10 @@
 
 @include breakpoint(tablet) {
 
+  #main-nav__toggle:checked ~ .main-nav__items{
+    display: flex;
+  }
+
   .header {
     position: relative;
   }
