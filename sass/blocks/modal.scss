@@ -1,0 +1,159 @@
+.size-select {
+  top: 160%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  //padding: 33px 20px 37px;
+  border: 2px solid $border-color;
+  background-color: white;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.7);;
+  z-index: 10001;
+
+  /** полная прозрачность изначально */
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  /* трансформация прозрачности при открытии  */
+
+  transition: opacity 500ms ease-in;
+
+
+  &--open {
+    display: block;
+  }
+
+}
+
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  visibility: hidden;
+  /* фон затемнения */
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  position: fixed; /* фиксированное позиционирование */
+  /* трансформация прозрачности при открытии  */
+  transition: opacity .5s;
+}
+
+.overlay:target{
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay:target+.size-select{
+  //top: 25%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.size-select__title{
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 25px auto 12px auto;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  color: black;
+}
+
+.size-select__notice{
+  margin: 0 0 21px;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.size-select__button{
+  margin: 25px auto;
+  background-color: white;
+  width: 260px;
+
+  &:hover, &:active{
+    background-color: $element-color;
+    border-color: $element-color;
+    color: white;
+  }
+}
+
+.size-select__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.size-select__input {
+  margin: 0;
+
+  &:not(:last-of-type) {
+    margin-right: 7px;
+  }
+}
+
+.size-select__label {
+  display: block;
+  width: 78px;
+  padding: 15.5px 0;
+
+  font-size: 17px;
+  line-height: 1;
+  font-weight: bold;
+  color: $text-color;
+  text-align: center;
+
+  border: 2px solid rgba($button-border-color, 0.1);
+
+  &:hover {
+    border: 2px solid rgba($button-border-color, 0.3);
+  }
+}
+
+input[type="radio"]:checked + .size-select__label {
+  border-color: $element-color;
+}
+
+@include breakpoint(tablet){
+  .size-select{
+    width: 550px;
+  }
+
+  .size-select__title {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .size-select__notice {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .size-select__form {
+    width: 380px;
+    margin: 0 auto;
+  }
+
+  .size-select__label {
+    width: 108px;
+    font-size: 18px;
+    padding: 18px 0;
+  }
+
+  .size-select__input {
+
+    &:not(:last-of-type) {
+      margin-right: 22px;
+    }
+  }
+
+  .size-select__button{
+    margin: 40px auto;
+    width: 380px;
+    padding: 17px 0 19px 0;
+  }
+
+}

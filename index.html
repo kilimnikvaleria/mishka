@@ -91,7 +91,7 @@
                 <img class="best-product__image" src="images/triple-set-mobile@1x.jpg" srcset="images/triple-set-mobile@2x.jpg 2x" alt="Изображение вязаной корзинки">
             </picture>
             <span class="best-product__item-price">Цена: 990 руб.</span>
-            <a class="best-product__item-btn button" href="#">заказать</a>
+            <a class="best-product__item-btn button" href="#form1">заказать</a>
         </div>
     </article>
     <section class="advantages">
@@ -196,6 +196,26 @@
         </a>
     </div>
 </footer>
+<a href="#x" class="overlay" id="form1"></a>
+<div class="size-select">
+    <h2 class="size-select__title">Добавить в корзину</h2>
+    <p class="size-select__notice">Выберите размер:</p>
+    <form class="size-select__form" action="#" method="post">
+        <p class="size-select__input">
+            <input type="radio" class="visually-hidden" name="size" value="s" id="s-size" checked>
+            <label class="size-select__label" for="s-size">S</label>
+        </p>
+        <p class="size-select__input">
+            <input type="radio" class="visually-hidden" name="size" value="m" id="m-size">
+            <label class="size-select__label" for="m-size">M</label>
+        </p>
+        <p class="size-select__input">
+            <input type="radio" class="visually-hidden" name="size" value="l" id="l-size">
+            <label class="size-select__label" for="l-size">L</label>
+        </p>
+        <input type="submit" class="size-select__button button" value="Добавить">
+    </form>
+</div>
 <script type="text/javascript" src="js/map.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
